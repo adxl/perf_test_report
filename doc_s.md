@@ -55,3 +55,22 @@ OS: Ubuntu 20.04.4 LTS x64 - GNOME 3.36.8 - X11
 
 Coefficient proportionnel = 0.35
 
+## Planification des tests
+
+Métriques surveillées : CPU - RAM - Réseau (response time)
+Critère de réussite : l'application supporte au minimum 80% de l'effectif total
+de l'établissement
+
+
+## Étapes de tests
+
+| Step # | Business Process Name : Product Ordering |
+|--------------|:-----------:|
+| 1 | Login |
+| 2 | Dashboard |
+| 3 | Homeworks |
+| 4 | Select homework |
+| 5 | Join Group |
+
+
+Jeu de données : fixtures mises en place au build, 1000 utilisateurs (étudiants)
