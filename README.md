@@ -1,4 +1,4 @@
-# perf_test_report
+# Performance Tests Report
 
 Adel Senhadji [adxl](https://github.com/adxl)  
 Ayoub Madani-Fouatih [MizuchiOryu](https://github.com/MizuchiOryu)  
