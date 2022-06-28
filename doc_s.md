@@ -3,7 +3,7 @@
 Adel Senhadji [adxl](https://github.com/adxl)  
 Ayoub Madani-Fouatih [MizuchiOryu](https://github.com/MizuchiOryu)  
 Maxime Marchand [ThePiotrow](https://github.com/ThePiotrow)  
-Jérémy Jumpertz [jumpertz](https://github.com/jumpert
+Jérémy Jumpertz [jumpertz](https://github.com/jumpert)
 
 4IW2 
 28/06/2022
