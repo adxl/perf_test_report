@@ -49,16 +49,16 @@ que tous les étudiants doivent rejoindre un groupe).
 
 ## Environnement de tests
 
-CPU : Intel® Core™ i7-1065G7 CPU @ 1.30GHz × 8  -> coef = 0.5
-Mémoire : 16GB -> coef = 0.21
-OS: Ubuntu 20.04.4 LTS x64 - GNOME 3.36.8 - X11
+- CPU : Intel® Core™ i7-1065G7 CPU @ 1.30GHz × 8  -> coef = 0.5
+- Mémoire : 16GB -> coef = 0.21
+- OS: Ubuntu 20.04.4 LTS x64 - GNOME 3.36.8 - X11
 
 Coefficient proportionnel = 0.35
 
 ## Planification des tests
 
-Métriques surveillées : CPU - RAM - Réseau (response time)
-Critère de réussite : l'application supporte au minimum 80% de l'effectif total
+- Métriques surveillées : CPU - RAM - Réseau (response time)
+- Critère de réussite : l'application supporte au minimum 80% de l'effectif total
 de l'établissement
 
 
