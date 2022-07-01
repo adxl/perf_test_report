@@ -34,7 +34,7 @@ Pour ce qui est des technologies utilisée le front est fait en React.
 
 L'objectif du test de volume est de :
 
-- Vérifier les performances du système avec des volumes considérable de données dans la base de données (2TB)
+- Vérifier les performances du système avec des volumes considérable de données dans la base de données (8TB)
 - Identifier les problèmes susceptibles de se produire avec une grande quantité de données ainsi que les goulets d'étranglement
 
 
@@ -79,5 +79,5 @@ Environnement de production :
 
 Jeu de donnée :
  - Type de donnée : donnée en base NOSQL
- - Quantité de donnée : 2TB
+ - Quantité de donnée : 8TB
  - Provenance : Clone de la préproduction
