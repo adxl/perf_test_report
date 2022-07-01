@@ -42,7 +42,7 @@ en fonction d'une gare de départ, d'une gare d'arrivée et de dates.
 - Mémoire : 16GB | DDR3 -> coef = 0.04
 - OS: Debian 11.3 x64 - KDE 4.13
 
-Coefficient proportionnel = 0.08
+Coefficient proportionnel = 0.13
 
 ## Planification des tests
 
