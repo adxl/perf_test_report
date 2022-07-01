@@ -1,4 +1,4 @@
-### RAPPORT DE PERFORMANCES 1 (S) : MySchool
+### RAPPORT DE PERFORMANCES 3 (L) : SNCF Connect
 
 Adel Senhadji [adxl](https://github.com/adxl)  
 Ayoub Madani-Fouatih [MizuchiOryu](https://github.com/MizuchiOryu)  
