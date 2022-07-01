@@ -78,6 +78,6 @@ Environnement de production :
 | 4 | Select Movies |
 
 Jeu de donnée :
- - Type de donnée : donnée en base de donnée NOSQL
+ - Type de donnée : donnée en base NOSQL
  - Quantité de donnée : 2TB
  - Provenance : Clone de la préproduction
