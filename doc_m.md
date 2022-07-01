@@ -40,9 +40,10 @@ L'objectif du test de volume est de :
 
 | Business Transactions | User Load | Response Time | Transactions per user |
 |--------------|:-----------:|:------------:|:------------:|
-| Access homepage page | 2000 | 1 | ~450 |
-| Access my_list_movies page | 2000 | 2 | ~100 |
-| Access download_movies page | 2000 | 2 | ~10 |
+| Access homepage page | 150 000 | 1 | ~450 |
+| Access my_list_movies page | 150 000 | 2 | ~100 |
+| Access download_movies page | 150 000 | 2 | ~10 |
+
 
 ## Environnement de tests
 
@@ -67,6 +68,8 @@ Environnement de production :
     - Le pourcentage du cpu ne dois pas exceder 5% pour un total de 3000 utilisateur simultanée en environnement de test
     - Temps de réponse moyen < 2secondes
 
+- Exemple d'utilisation de metric CPU:
+À l'aide des metrics CPU nous allons vérifier si le temps d'indexation reste stable en fonction du nombre de données en base par exemple en production pour 150 0 00 données récupérées 30%sdu cpu est utilisé nous attendons le même résultat pour le double de données récupérées.
 
 ## Étapes de tests
 
