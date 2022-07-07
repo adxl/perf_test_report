@@ -84,3 +84,20 @@ Jeu de donnée :
  - Type de donnée : donnée en base NOSQL
  - Quantité de donnée : 8TB
  - Provenance : Clone de la préproduction
+
+## Execution des tests
+
+| # | Cycle  | Test Run | Time
+|--------------|:-----------:|:-----------:|:-----------:|
+| 1 | 1 | Volume Test | 2 heure
+
+|  | Test Details |
+|--------------|:-----------:|
+| **Purpose** | Le premier test est a pour but pour determiné si malgré une grande quantité de donnée en base un utilisateur peut toujours avoir axés a l'interface et ainsi la parcourir. Ce test est conçu pour collecter des mesures de performances sur le temps d'indexiation en base et l'utilisation des ressources système, par rapport aux exigences de performances. |
+| **No. of Tests** | 1 (1 tests per cycle) |
+| **Duration** | Ramp-up: 50 000 - Steady State: 150 000 - Ramp-down: 90 000 |
+| **Scripts** | 1. XXXX - 2. XXXX |
+| **Scenario Name** | Volume Test Scenario |
+| **User Load / Volume** | 150 000 Vusers (Threads) Load |
+| **Entry Criteria** |1. Le code doit etre stable et fonctionnel 2. L'environnement de test doit etre configuré et prêt a l'emploi.3. Le jeu de données de test doit etre disponible .4. Les scripts de test doivent etre stable et fonctionel.
+| **Validation Criteria** | 1. Le pourcentage du cpu ne dois pas exceder 5% pour un total de 3000 utilisateur simultanée en environnement de test.2. Temps de réponse moyen < 2secondes |
