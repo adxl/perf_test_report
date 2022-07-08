@@ -40,9 +40,9 @@ L'objectif du test de volume est de :
 
 | Business Transactions | User Load | Response Time | Transactions per user |
 |--------------|:-----------:|:------------:|:------------:|
-| Access homepage page | 80 000 | 1 | ~450 |
-| Access my_list_movies page | 80 000 | 2 | ~100 |
-| Access download_movies page | 80 000 | 2 | ~10 |
+| Access homepage page | 150 000 | 1 | ~450 |
+| Access my_list_movies page | 150 000 | 2 | ~100 |
+| Access download_movies page | 150 000 | 2 | ~10 |
 
 
 ## Environnement de tests
@@ -54,7 +54,7 @@ Environnement de test :
 
 Environnement de production :
 - CPU : AMD EPYC 7763 64 cores & 128 Threads
-- Mémoire : 64GB
+- Mémoire : 256GB
 - OS: Red Hat Enterprise Linux 8 RHEL 8.6
 
 
@@ -94,7 +94,7 @@ En prérequis la base va être alimenté avec 2 TB de données.
 | **Purpose** | Le test a pour but de determiné si un grand volume de donnée en base impact sur la requete que l'utilisateur effectue. Ce test est conçu pour collecter des mesures de performances sur le temps d'indexiation en base et l'utilisation des ressources système, par rapport aux exigences de performances. |
 | **No. of Cycle** | 2
 | **No. of Tests** | 1 (1 tests per cycle) |
-| **Duration** | Ramp-up: 5 000 - Steady State: 60 000 - Ramp-down: 10 000 |
+| **Duration** | Ramp-up: 5 000 - Steady State: 20 000 - Ramp-down: 10 000 |
 | **Scripts** | 1. XXXX - 2. XXXX |
 | **Scenario Name** | Load Test Scenario |
 | **User Load / Volume** | 60 000 Vusers (Threads) Load |
