@@ -40,9 +40,9 @@ L'objectif du test de volume est de :
 
 | Business Transactions | User Load | Response Time | Transactions per user |
 |--------------|:-----------:|:------------:|:------------:|
-| Access homepage page | 150 000 | 1 | ~450 |
-| Access my_list_movies page | 150 000 | 2 | ~100 |
-| Access download_movies page | 150 000 | 2 | ~10 |
+| Access homepage page | 80 000 | 1 | ~450 |
+| Access my_list_movies page | 80 000 | 2 | ~100 |
+| Access download_movies page | 80 000 | 2 | ~10 |
 
 
 ## Environnement de tests
@@ -83,7 +83,7 @@ Jeu de donnée :
 
 ## Execution des tests
 
-En prérequis la base va être alimenté avec 1 TB de données.
+En prérequis la base va être alimenté avec 2 TB de données.
 
 | # | Cycle  | Test Run | Time
 |--------------|:-----------:|:-----------:|:-----------:|
