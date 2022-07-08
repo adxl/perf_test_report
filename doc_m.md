@@ -64,12 +64,8 @@ Environnement de production :
     - CPU - RAM 
     - Réseau (response time) 
     - Bandwidth
-- Critère de réussite : 
-    - Le pourcentage du cpu ne dois pas exceder 5% pour un total de 3000 utilisateur simultanée en environnement de test
-    - Temps de réponse moyen < 2secondes
-
 - Exemple d'utilisation de metric CPU:
-À l'aide des metrics CPU nous allons vérifier si le temps d'indexation reste stable en fonction du nombre de données en base par exemple en production pour 150 0 00 données récupérées 30%sdu cpu est utilisé nous attendons le même résultat pour le double de données récupérées.
+À l'aide des metrics CPU nous allons vérifier si le temps d'indexation reste stable en fonction du nombre de données en base.
 
 ## Étapes de tests
 
@@ -89,15 +85,16 @@ Jeu de donnée :
 
 | # | Cycle  | Test Run | Time
 |--------------|:-----------:|:-----------:|:-----------:|
-| 1 | 1 | Volume Test | 2 heure
+| 1 | 2 | Load Test | 1 heure
 
 |  | Test Details |
 |--------------|:-----------:|
-| **Purpose** | Le premier test est a pour but pour déterminé si malgré une grande quantité de données en base un utilisateur peut toujours avoir axés à l'interface et ainsi la parcourir. Ce test est conçu pour collecter des mesures de performances sur le temps d'indexation en base et l'utilisation des ressources système, par rapport aux exigences de performances. |
+| **Purpose** | Le test a pour but de determiné si malgré une grande quantité de donnée en base un utilisateur peut toujours avoir axés a l'interface et ainsi la parcourir. Ce test est conçu pour collecter des mesures de performances sur le temps d'indexiation en base et l'utilisation des ressources système, par rapport aux exigences de performances. |
+| **No. of Cycle** | 2
 | **No. of Tests** | 1 (1 tests per cycle) |
-| **Duration** | Ramp-up: 50 000 - Steady State: 150 000 - Ramp-down: 90 000 |
+| **Duration** | Ramp-up: 5 000 - Steady State: 20 000 - Ramp-down: 10 000 |
 | **Scripts** | 1. XXXX - 2. XXXX |
-| **Scenario Name** | Volume Test Scenario |
-| **User Load / Volume** | 150 000 Vusers (Threads) Load |
-| **Entry Criteria** | 1. Le code doit être stable et fonctionnel 2. L'environnement de test doit être configuré et prêt à l'emploi.3. Le jeu de données de test doit être disponible .4. Les scripts de test doivent être stable et fonctionnel.
-| **Validation Criteria** | 1. Le pourcentage du cpu ne doit pas excéder 5% pour un total de 3000 utilisateurs simultanés en environnement de test. 2. Temps de réponse moyen < 2 secondes |
+| **Scenario Name** | Load Test Scenario |
+| **User Load / Volume** | 20 000 Vusers (Threads) Load |
+| **Entry Criteria** |1. Le code doit etre stable et fonctionnel 2. L'environnement de test doit etre configuré et prêt a l'emploi.3. Le jeu de données de test doit etre disponible .4. Les scripts de test doivent etre stable et fonctionel.
+| **Validation Criteria** | 1. Le pourcentage du cpu doit etre faible .2. Temps de réponse moyen doit etre correct |
