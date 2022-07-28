@@ -87,8 +87,7 @@ En prérequis la base va être alimenté avec 10 MB de données.
 
 |  | Test Details |
 |--------------|:-----------:|
-| **Purpose** | Le test a pour but de determiné les capacité maximal que l'application peut supporter.
-Ce test est conçu pour collecter des mesures de performances et l'utilisation des ressources système.
+| **Purpose** | Le test a pour but de determiné les capacité maximal que l'application peut supporter. Ce test est conçu pour collecter des mesures de performances et l'utilisation des ressources système.
 | **No. of Cycle** | 1
 | **No. of Tests** | 1 (1 tests per cycle) |
 | **Duration** | Ramp-up: 20 - Steady State: 10
