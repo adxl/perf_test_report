@@ -21,9 +21,7 @@ L'objectif est de faciliter la gestion d'un établissement sous 3 angles :
 - Professeur : il peut gérer sa classe, affecter des notes, des projets, la présence
 - Étudiants : d'accéder à leurs document de cours, planning, notes, projets pédagogique
 
-L'objectif est de réaliser un spike test pour s'assurer que notre application
-puisse supporter une charge massive d'utilisateurs en plusieurs courts instants
-à interval régulier.
+L'objectif est de réaliser un stress test pour connaître les points de rupture de l'application.
 
 ## L'architecture
 
@@ -36,38 +34,73 @@ L'application est hébergée sur Heroku.
 
 ## Exigences du test
 
-Un cas d'utilisation régulier de notre application est que plusieurs étudiants
-se connectent en même temps lorsequ'un professeur crée un projet pédagogique et
-que tous les étudiants doivent rejoindre un groupe.
+L'objectif du test de stress est de :
 
-En supposant qu'on gère une école de 1000 étudiants.
+- Identifier les problèmes susceptibles de se produire avec un fort trafic.
 
-| Business Transactions | User Load | Response Time | Transactions per hour |
-|-----------------------|:---------:|:-------------:|:---------------------:|
-| Access homework page  |      1000 | 1             |                 ~5000 |
+
+| Business Transactions | User Load | Response Time | Transactions per user |
+|--------------|:-----------:|:------------:|:------------:|
+| Access Login page | 320 | 1 | ~450 |
+| Access Profile page | 200 | 1 | ~450 |
+
 
 ## Environnement de tests
 
-| Ressource | Local | Production | Coef. Proportionnel |
-|-----------|:-----:|:----------:|:-------------------:|
-| CPU       | Intel i7-1065G7 8 Core | 8 Core Shared CPU | 100% |
-| RAM       | 16 GB  | 512 MB     | 3200% |
-| OS        | Ubuntu 20.04.4 LTS x64 | Linux Container | - |
+Environnement de test :
+- CPU : MacBook Pro (13-inch, M1, 2020)
+- Mémoire : 16GB
+- OS: macOS Monterey 12.2.1
+
+Environnement de production :
+- CPU : Linux enterprise 2 cores
+- Mémoire : 512 Mb
+- OS: Linux Alpine
 
 ## Planification des tests
 
-Métriques surveillées : CPU - RAM - Réseau (response time)  
-Critère de réussite : l'application doit supporter la charge à laquelle tous
-les étudiants doivent rejoindre leur groupe respectif.
+- Métriques surveillées : 
+    - CPU - RAM 
+    - Réseau (response time)
 
 ## Étapes de tests
+
+Etape student:
 
 | Step # | Business Process Name : Product Ordering |
 |--------------|:-----------:|
 | 1 | Login |
-| 2 | Dashboard |
-| 3 | Homeworks |
-| 4 | Select homework |
-| 5 | Join Group |
+| 2 | Profile |
 
-Jeu de données : fixtures de 1000 utilisateurs (étudiants)
+Jeu de donnée :
+ - Type de donnée : donnée en base NoSQL
+ - Quantité de donnée :10 MB
+ - Provenance : Fixtures(donnée de mock)
+
+## Execution des tests
+
+En prérequis la base va être alimenté avec 10 MB de données.
+
+| # | Cycle  | Test Run | Time
+|--------------|:-----------:|:-----------:|:-----------:|
+| 1 | 2 | Stress Test | 30 min
+
+|  | Test Details |
+|--------------|:-----------:|
+| **Purpose** | Le test a pour but de determiné les capacité maximal que l'application peut supporter.
+Ce test est conçu pour collecter des mesures de performances et l'utilisation des ressources système.
+| **No. of Cycle** | 1
+| **No. of Tests** | 1 (1 tests per cycle) |
+| **Duration** | Ramp-up: 20 - Steady State: 10
+| **Scripts** | 1. XXXX - 2. XXXX |
+| **Scenario Name** | Stress Test Scenario |
+| **User Load / Volume** | 320 Vusers (Threads) Load |
+| **Entry Criteria** |1. Le code doit etre stable et fonctionnel 2. L'environnement de test doit etre configuré et prêt a l'emploi.3. Le jeu de données de test doit etre disponible .4. Les scripts de test doivent etre stable et fonctionel.
+
+
+## Résultats des tests
+Ici, référencez les graphiques et données résultant des tests effectués
+
+![Graph](graph.png)
+
+![Rapport](rapport.png)
