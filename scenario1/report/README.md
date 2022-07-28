@@ -42,11 +42,11 @@ L'objectif du test de stress est de :
 
 | Business Transactions          | User Load | Response Time | Transactions per user |
 | ------------------------------ | :-------: | :-----------: | :-------------------: |
-| Access Login page              |    50     |       1       |         ~450          |
-| Access Student page            |    50     |       1       |         ~450          |
-| Access Homeworks page          |    50     |       1       |         ~450          |
-| Access Specific homeworks page |    50     |       1       |         ~450          |
-| Join a group                   |    50     |       1       |         ~450          |
+| Access Login page              |    200     |       1       |         ~450          |
+| Access Student page            |    200     |       1       |         ~450          |
+| Access Homeworks page          |    200     |       1       |         ~450          |
+| Access Specific homeworks page |    200     |       1       |         ~450          |
+| Join a group                   |    200     |       1       |         ~450          |
 
 
 ## Environnement de tests
